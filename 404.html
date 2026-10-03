@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALTRun</title>
+<script>
+  // 项目网站的路径区分大小写: /altrun、/Altrun/... 都转到 /ALTRun/..., 其它不存在的地址转到首页
+  (function () {
+    var path = location.pathname;
+    var match = path.match(/^\/altrun(\/.*)?$/i);
+    location.replace((match ? "/ALTRun" + (match[1] || "/") : "/ALTRun/") + location.search + location.hash);
+  })();
+</script>
+<style>body{font:16px/1.6 system-ui,"Segoe UI","Microsoft YaHei",sans-serif;margin:40px 16px;text-align:center;color:#444;background:#fff}a{color:#3b62f0}</style>
+</head>
+<body>
+<p>页面不存在, 正在打开 ALTRun 官网… / Page not found, opening the ALTRun website…</p>
+<p><a href="/ALTRun/">https://zhugecaomao.github.io/ALTRun/</a></p>
+</body>
+</html>
